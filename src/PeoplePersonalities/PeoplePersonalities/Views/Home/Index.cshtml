@@ -1,0 +1,62 @@
+﻿@model PeoplePersonalities.Models.HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Lokalne typy osobowości";
+}
+
+<form id="filterForm" method="get" asp-action="Index" asp-controller="Home" class="mb-3">
+    <div class="row g-3">
+        <div class="col-md-4">
+            <select id="typeSelect" name="type" class="form-select">
+                <option value="">Wszystkie typy</option>
+                @foreach (var type in Model.Types)
+                {
+                    if (Model.SelectedType == type)
+                    {
+                        <option value="@type" selected>@type</option>
+                    }
+                    else
+                    {
+                        <option value="@type">@type</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success aggregate-buttons">Filtruj</button>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-warning aggregate-buttons">Reset</a>
+            <a href="Home/AddPerson" class="btn btn-info aggregate-buttons">Dodaj osobę</a>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col">Typ</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Items != null && Model.Items.Any())
+        {
+            var index = 1;
+            foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Type</td>
+                </tr>
+                index++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="text-center">No data</td>
+            </tr>
+        }
+    </tbody>
+</table>
