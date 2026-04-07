@@ -1,0 +1,18 @@
+﻿table {
+    font-size: 14px;
+}
+
+form {
+    margin-top: 4%;
+}
+
+select {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    border: 1px solid !important;
+    box-shadow: none !important;
+}
+
+.aggregate-buttons {
+    font-size: 12px !important;
+}
