@@ -6,7 +6,6 @@ using System.Globalization;
 
 namespace PeoplePersonalities.Controllers
 {
-    [Route("Home/AddPerson")]
     public class AddPersonController : Controller
     {
         private readonly IAddPersonService _addPersonService;
@@ -19,7 +18,7 @@ namespace PeoplePersonalities.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View("~/Views/AddPerson/Index.cshtml");
         }
 
         [HttpPost]
