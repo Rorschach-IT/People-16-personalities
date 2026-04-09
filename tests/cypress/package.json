@@ -1,0 +1,14 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "E2E & Component compatibility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rorschach",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.13.1"
+  }
+}
