@@ -17,7 +17,7 @@ namespace PeoplePersonalities.Services
         public AddPersonService(IMongoClient client)
         {
             var database = client.GetDatabase("PeoplePersonalities");
-            _collection = database.GetCollection<PersonPersonality>("PeoplePersonalities");
+            _collection = database.GetCollection<PersonPersonality>("PeoplePersonalitiesMocks");
         }
 
         public async Task<bool> ExistsAsync(string firstName, string lastName)

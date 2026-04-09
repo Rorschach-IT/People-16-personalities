@@ -15,7 +15,7 @@ namespace PeoplePersonalities.Services
         public AggregateDataService(IMongoClient client)
         {
             var database = client.GetDatabase("PeoplePersonalities");
-            _collection = database.GetCollection<PersonPersonality>("PeoplePersonalities");
+            _collection = database.GetCollection<PersonPersonality>("PeoplePersonalitiesMocks");
         }
 
         public async Task<List<string>> GetDistinctTypesAsync()
