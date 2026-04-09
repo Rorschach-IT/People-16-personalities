@@ -297,6 +297,9 @@ FakesAssemblies/
 # GhostDoc plugin setting file
 *.GhostDoc.xml
 
+# Temp init exclude
+init
+
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
