@@ -4,7 +4,9 @@
   "description": "E2E & Component compatibility",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "visitWebsiteDefault": "cypress run --spec cypress/e2e/development/visitWebsiteDefault.cy.js",
+    "visitWebsiteWithConfig": "cypress run --spec cypress/e2e/development/visitWebsiteWithConfig.cy.js",
+    "test:all": "cypress run"
   },
   "author": "Rorschach",
   "license": "ISC",
