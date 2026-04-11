@@ -305,8 +305,9 @@ init
 # AggregateDataService.cs
 # PersonPersonalityService.cs
 
-# Exclude test folder
-tests
+# Exclude test screenshots and video folder
+screenshost
+video
 
 # Exclude pipeline folder
 pipeline
