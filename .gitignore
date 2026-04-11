@@ -300,6 +300,17 @@ FakesAssemblies/
 # Temp init exclude
 init
 
+# Temp mock data exclude
+# AddPersonService.cs
+# AggregateDataService.cs
+# PersonPersonalityService.cs
+
+# Exclude test folder
+tests
+
+# Exclude pipeline folder
+pipeline
+
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
