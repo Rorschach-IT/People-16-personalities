@@ -73,6 +73,7 @@ BenchmarkDotNet.Artifacts/
 project.lock.json
 project.fragment.lock.json
 artifacts/
+.idea
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
@@ -297,9 +298,6 @@ FakesAssemblies/
 # GhostDoc plugin setting file
 *.GhostDoc.xml
 
-# Temp init exclude
-init
-
 # Temp mock data exclude
 # AddPersonService.cs
 # AggregateDataService.cs
@@ -308,9 +306,6 @@ init
 # Exclude test screenshots and video folder
 screenshost
 video
-
-# Exclude pipeline folder
-pipeline
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
