@@ -1,0 +1,16 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongodb-local
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: PeoplePersonalities
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./init:/docker-entrypoint-initdb.d:ro
+      - ./seed:/seed:ro
+
+volumes:
+  mongo_data:

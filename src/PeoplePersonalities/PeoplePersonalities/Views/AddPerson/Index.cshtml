@@ -1,0 +1,45 @@
+﻿@model PeoplePersonalities.Models.PersonPersonality
+
+@{
+    ViewData["Title"] = "Dodaj osoby";
+}
+
+<form asp-controller="AddPerson" asp-action="Index" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label asp-for="FirstName" class="form-label"></label>
+        <input asp-for="FirstName" class="form-control" id="InputFirstname" required/>
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label"></label>
+        <input asp-for="LastName" class="form-control" id="InputLastname" required/>
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Type" class="form-label"></label>
+        <input asp-for="Type" class="form-control" id="InputPersonalityType" required/>
+        <div class="form-text">
+            INTJ, INTP, ENTJ, ENTP, INFJ, INFP, ENFJ, ENFP, ISTJ, ISFJ, ESTJ, ESFJ, ISTP, ISFP, ESTP, ESFP
+        </div>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Potwierdź</button>
+
+    @if (ViewData.ModelState.TryGetValue(string.Empty, out var entry) && entry.Errors.Any())
+    {
+        <div class="text-danger mb-3">
+            @entry.Errors.First().ErrorMessage
+        </div>
+    }
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

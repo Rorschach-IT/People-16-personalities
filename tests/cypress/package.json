@@ -1,0 +1,16 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "E2E & Component compatibility",
+  "main": "index.js",
+  "scripts": {
+    "visitWebsiteDefault": "cypress run --spec cypress/e2e/development/visitWebsiteDefault.cy.js",
+    "visitWebsiteWithConfig": "cypress run --spec cypress/e2e/development/visitWebsiteWithConfig.cy.js",
+    "test:all": "cypress run"
+  },
+  "author": "Rorschach",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.13.1"
+  }
+}

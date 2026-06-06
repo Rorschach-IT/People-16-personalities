@@ -1,0 +1,11 @@
+﻿form {
+    font-size: 80%;
+}
+
+form input {
+    height: 100%;
+}
+
+form button {
+    font-size: 95% !important;
+}

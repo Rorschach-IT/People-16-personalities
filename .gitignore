@@ -42,6 +42,7 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+.slnx
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -73,6 +74,7 @@ BenchmarkDotNet.Artifacts/
 project.lock.json
 project.fragment.lock.json
 artifacts/
+.idea
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
@@ -192,8 +194,8 @@ DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
 
-# Click-Once directory
-publish/
+# Click-Once directory (temporary changed for publishing on branch IIS)
+# publish/
 
 # Publish Web Output
 *.[Pp]ublish.xml
@@ -296,6 +298,15 @@ FakesAssemblies/
 
 # GhostDoc plugin setting file
 *.GhostDoc.xml
+
+# Temp mock data exclude
+# AddPersonService.cs
+# AggregateDataService.cs
+# PersonPersonalityService.cs
+
+# Exclude test screenshots and video folder
+screenshost
+video
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
