@@ -1,21 +1,16 @@
 ﻿using MongoDB.Driver;
 using PeoplePersonalities.Models;
+using PeoplePersonalities.Services.Interfaces;
 
-namespace PeoplePersonalities.Services
+namespace PeoplePersonalities.Services.Impls
 {
-    public interface IPersonPersonalityService
-    {
-        Task<List<PersonPersonality>> GetAllAsync(string? type = null);
-    }
-
     public class PersonPersonalityService : IPersonPersonalityService
     {
         private readonly IMongoCollection<PersonPersonality> _collection;
 
-        public PersonPersonalityService(IMongoClient client)
+        public PersonPersonalityService(IMongoCollection<PersonPersonality> collection)
         {
-            var database = client.GetDatabase("PeoplePersonalities");
-            _collection = database.GetCollection<PersonPersonality>("PeoplePersonalitiesMocks");
+            _collection = collection;
         }
 
         public async Task<List<PersonPersonality>> GetAllAsync(string? type = null)

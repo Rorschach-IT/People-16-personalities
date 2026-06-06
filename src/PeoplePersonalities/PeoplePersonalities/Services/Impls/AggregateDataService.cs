@@ -1,21 +1,16 @@
 ﻿using MongoDB.Driver;
 using PeoplePersonalities.Models;
+using PeoplePersonalities.Services.Interfaces;
 
-namespace PeoplePersonalities.Services
+namespace PeoplePersonalities.Services.Impls
 {
-    public interface IAggregateDataService
-    {
-        Task<List<string>> GetDistinctTypesAsync();
-    }
-
     public class AggregateDataService : IAggregateDataService
     {
         private readonly IMongoCollection<PersonPersonality> _collection;
 
-        public AggregateDataService(IMongoClient client)
+        public AggregateDataService(IMongoCollection<PersonPersonality> collection)
         {
-            var database = client.GetDatabase("PeoplePersonalities");
-            _collection = database.GetCollection<PersonPersonality>("PeoplePersonalitiesMocks");
+            _collection = collection;
         }
 
         public async Task<List<string>> GetDistinctTypesAsync()

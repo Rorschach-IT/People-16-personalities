@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using PeoplePersonalities.Models;
 using PeoplePersonalities.Services;
 using System.Diagnostics;
+using PeoplePersonalities.Services.Interfaces;
 
 namespace PeoplePersonalities.Controllers
 {
@@ -18,6 +19,7 @@ namespace PeoplePersonalities.Controllers
             _aggregateDataService = aggregateDataService;
         }
 
+        // Default directory {Views/Home/Index.cshtml}
         [HttpGet]
         public async Task<IActionResult> Index([FromQuery] string? type)
         {

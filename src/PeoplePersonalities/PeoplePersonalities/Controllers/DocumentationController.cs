@@ -2,7 +2,6 @@
 
 namespace PeoplePersonalities.Controllers
 {
-    [Route("Documentation")]
     public class DocumentationController : Controller
     {
         [HttpGet]
