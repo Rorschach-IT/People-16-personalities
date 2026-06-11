@@ -2,7 +2,7 @@ services:
   mongo:
     image: mongo:latest
     container_name: mongodb-local
-    restart: always
+    restart: unless-stopped
     environment:
       MONGO_INITDB_DATABASE: PeoplePersonalities
     ports:
